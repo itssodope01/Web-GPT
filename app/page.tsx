@@ -71,7 +71,7 @@ export default function Home() {
           <div className="mb-16 grid w-full max-w-5xl text-center lg:mb-0 lg:grid-cols-2 lg:text-left gap-6">
             <a
               href="https://github.com/itssodope01/Web-GPT"
-              className="group rounded-lg border border-transparent p-5 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+              className="group rounded-lg border sm:border-transparent p-5 transition-colors border-neutral-700 hover:border-gray-300  bg-neutral-800/30 sm:bg-transparent hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
               target="_blank"
               rel="noopener noreferrer"
             >
