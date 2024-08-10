@@ -3,6 +3,8 @@ import { ragChat } from "@/lib/rag-chat";
 import { redis } from "@/lib/redis";
 import ChatWrapper from "@/app/components/ChatWrapper";
 import { cookies } from "next/headers";
+import Nav from "@/app/components/Nav";
+import { isMobile } from "react-device-detect";
 
 interface Pageprops {
   params: {
@@ -38,8 +40,17 @@ const page = async ({ params }: Pageprops) => {
     await redis.sadd("indexed-urls", decodedUrl);
   }
 
+  const currentPosition = isMobile ? "top" : "left";
+
   return (
-    <ChatWrapper sessionID={sessionID} initialMessages={initialMessages} />
+    <Nav position={currentPosition}>
+      <ChatWrapper
+        sessionID={sessionID}
+        initialMessages={initialMessages}
+        decodedUrl={decodedUrl}
+        navPosition={currentPosition}
+      />
+    </Nav>
   );
 };
 
