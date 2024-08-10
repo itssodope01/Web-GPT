@@ -66,11 +66,6 @@ export default function Home() {
                 {loading ? "Loading..." : "Chat"}
               </button>
             </div>
-            {loading && (
-              <div className="loader mt-4">
-                <p>Loading...</p>
-              </div>
-            )}
           </div>
 
           <div className="mb-16 grid w-full max-w-5xl text-center lg:mb-0 lg:grid-cols-2 lg:text-left gap-6">
