@@ -7,6 +7,8 @@
 
 A cutting-edge Chat Application that enables users to interact with a context-aware chatbot. Leveraging the power of Machine Learning and efficient data storage, this chatbot provides responses based on the content of the website, creating a truly interactive and intelligent conversational experience.
 
+Deployed: [Web-GPT](https://web-gpt-sandy.vercel.app/)
+
 ## 🌟 Features
 
 - **🧠 Contextual Intelligence**: Generates relevant responses by understanding the current webpage's content.
