@@ -48,7 +48,7 @@ The chatbot is powered by the **Meta-Llama-3-8B-Instruct** model, a state-of-the
 
    ```bash
    git clone https://github.com/itssodope01/Web-GPT.git
-   cd chatbot-contextual-awareness
+   cd Web-GPT
    ```
 
 2. Install dependencies:
@@ -67,10 +67,10 @@ The chatbot is powered by the **Meta-Llama-3-8B-Instruct** model, a state-of-the
 Create a `.env` file in the root directory with the following content:
 
 ```env
-UPSTASH_VECTOR_REST_URL="https://humorous-mammoth-11763-eu1-vector.upstash.io"
+UPSTASH_VECTOR_REST_URL="GET THE URL"
 UPSTASH_VECTOR_REST_TOKEN="Your_Vector_REST_Token"
 QSTASH_TOKEN="Your_QSTASH_Token"
-UPSTASH_REDIS_REST_URL="https://strong-dodo-54015.upstash.io"
+UPSTASH_REDIS_REST_URL="GET THE URL"
 UPSTASH_REDIS_REST_TOKEN="Your_Redis_REST_Token"
 ```
 
