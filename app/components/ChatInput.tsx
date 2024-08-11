@@ -52,7 +52,7 @@ const ChatInput = ({
 
   return (
     <div
-      className={`fixed bottom-0 p-4 mb-5 ${
+      className={`fixed bottom-0 p-2 mb-5 ${
         isTopStyle ? "left-0" : "left-[365px]"
       } w-full bg-zinc-800`}
       style={{ width: isTopStyle ? "100%" : "calc(100% - 365px)" }}

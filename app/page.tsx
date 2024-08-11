@@ -40,7 +40,7 @@ export default function Home() {
         <main className="flex h-[88vh] flex-col items-center justify-between p-6 md:p-12 lg:p-24">
           <div className="z-10 w-full max-w-5xl items-center justify-center font-mono text-sm flex flex-col">
             <div className="text-center mb-8">
-              <h1 className="text-3xl font-bold mb-4 mt-10 sm:mt-0">
+              <h1 className="text-3xl font-bold mb-4 mt-10 sm:mt-0 bg-gradient-to-r from-blue-500 to-blue-600 text-transparent bg-clip-text">
                 Chat with Any Website
               </h1>
               <p className="text-lg max-w-2xl">
@@ -60,17 +60,13 @@ export default function Home() {
               />
               <button
                 onClick={handleSearch}
-                className="absolute right-0 top-0 mt-3 mr-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+                className="absolute right-0 top-0 mt-3 mr-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 transition-colors duration-200 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={loading}
+                aria-label={loading ? "Loading" : "Start chat"}
               >
                 {loading ? "Loading..." : "Chat"}
               </button>
             </div>
-            {loading && (
-              <div className="loader mt-4">
-                <p>Loading...</p>
-              </div>
-            )}
           </div>
 
           <div className="mb-16 grid w-full max-w-5xl text-center lg:mb-0 lg:grid-cols-2 lg:text-left gap-6">

@@ -25,7 +25,7 @@ const Messages = ({ messages, decodedUrl }: MessagesProps) => {
 
   return (
     <div
-      className="flex max-h-[calc(100vh-3.5rem-7rem)] flex-1 flex-col overflow-auto sm:mt-10 mt-2"
+      className="flex max-h-[calc(100vh-3.5rem-5rem)] flex-1 flex-col overflow-auto sm:mt-10 mt-1"
       id="messages-container"
     >
       {messages.length ? (

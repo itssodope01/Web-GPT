@@ -14,6 +14,8 @@ const Nav = ({ position = "top", children }: NavProps) => {
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
+  const isTopStyle = isMobile || position === "top";
+
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 1024);
     handleResize();
@@ -22,26 +24,29 @@ const Nav = ({ position = "top", children }: NavProps) => {
   }, []);
 
   useEffect(() => {
-    if (position === "top") {
+    if (isTopStyle) {
       const messagesContainer = document.getElementById("messages-container");
+
       const handleScroll = () => {
         if (messagesContainer) {
           const currentScrollTop = messagesContainer.scrollTop;
-          if (currentScrollTop < lastScrollTop) {
-            setScrollingUp(false);
-          } else {
+
+          if (currentScrollTop > lastScrollTop) {
             setScrollingUp(true);
+          } else if (currentScrollTop < lastScrollTop) {
+            setScrollingUp(false);
           }
+
           setLastScrollTop(currentScrollTop);
         }
       };
+
       messagesContainer?.addEventListener("scroll", handleScroll);
+
       return () =>
         messagesContainer?.removeEventListener("scroll", handleScroll);
     }
-  }, [lastScrollTop, position, isMobile]);
-
-  const isTopStyle = isMobile || position === "top";
+  }, [isTopStyle, lastScrollTop]);
 
   const PlusButton = () => (
     <Link
@@ -95,14 +100,16 @@ const Nav = ({ position = "top", children }: NavProps) => {
             {isTopStyle && <PlusButton />}
             <Link
               href="https://buymeacoffee.com/pritamchk"
-              className="flex items-center gap-2 rounded-full bg-zinc-800 px-4 py-2 text-sm font-medium transition-colors hover:bg-zinc-700"
+              className={`flex items-center gap-2 rounded-full bg-zinc-800 px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-zinc-700 ${
+                scrollingUp && isTopStyle ? "px-2 py-2" : "px-4 py-2"
+              }`}
               target="_blank"
               rel="noopener noreferrer"
             >
               <Coffee size={18} />
               <span
                 className={`transition-all duration-300 ${
-                  scrollingUp && isTopStyle ? "hidden" : "block"
+                  scrollingUp && isTopStyle ? "hidden w-0 opacity-0" : "block"
                 }`}
               >
                 Donate
