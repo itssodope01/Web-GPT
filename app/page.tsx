@@ -44,7 +44,7 @@ export default function Home() {
                 Chat with Any Website
               </h1>
               <p className="text-lg max-w-2xl">
-                Our AI chatbot interacts with web content to provide
+                This AI chatbot interacts with web content to provide
                 context-aware conversations.
               </p>
             </div>
@@ -60,7 +60,7 @@ export default function Home() {
               />
               <button
                 onClick={handleSearch}
-                className="absolute right-0 top-0 mt-3 mr-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 transition-colors duration-200 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed"
+                className="absolute right-0 top-0 mt-3 mr-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 transition-colors duration-200 ease-in-out disabled:cursor-not-allowed"
                 disabled={loading}
                 aria-label={loading ? "Loading" : "Start chat"}
               >
