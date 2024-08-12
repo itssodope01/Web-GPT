@@ -1,9 +1,10 @@
 # 🤖 Web-GPT
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/React-18.2.0-whitesmoke?style=flat&logo=react&logoColor=white&logoSize=auto&labelColor=blue)](https://react.dev/)
 [![Next.js](https://img.shields.io/badge/Next.js-14.x-black)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=flat&logo=typescript&logoColor=blue&logoSize=auto&labelColor=whitesmoke)](https://www.typescriptlang.org/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.x-blue?style=flat&logo=tailwindcss&logoColor=blue&logoSize=auto&labelColor=black)](https://tailwindcss.com/)
+[![Meta-Llama](https://img.shields.io/badge/Meta-Llama--3--8B--Instruct-royalblue%20?style=flat&logo=meta&logoColor=blue&logoSize=auto&labelColor=whitesmoke)](https://ai.meta.com/blog/meta-llama-3/)
 
 A cutting-edge Chat Application that enables users to interact with a context-aware chatbot. Leveraging the power of Machine Learning and efficient data storage, this chatbot provides responses based on the content of the website, creating a truly interactive and intelligent conversational experience.
 
